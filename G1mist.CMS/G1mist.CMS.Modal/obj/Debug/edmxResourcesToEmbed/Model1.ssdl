@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="dbModelStoreContainer">
+    <EntitySet Name="alliance" EntityType="dbModel.Store.alliance" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="shopform" EntityType="dbModel.Store.shopform" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_admin" EntityType="dbModel.Store.tb_admin" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_class" EntityType="dbModel.Store.tb_class" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_commo" EntityType="dbModel.Store.tb_commo" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_form" EntityType="dbModel.Store.tb_form" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_links" EntityType="dbModel.Store.tb_links" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_opinion" EntityType="dbModel.Store.tb_opinion" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_public" EntityType="dbModel.Store.tb_public" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_sales_fee" EntityType="dbModel.Store.tb_sales_fee" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_sales_install" EntityType="dbModel.Store.tb_sales_install" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_sales_user" EntityType="dbModel.Store.tb_sales_user" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="tb_user" EntityType="dbModel.Store.tb_user" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="twocode" EntityType="dbModel.Store.twocode" store:Type="Tables" Schema="hdm156661638_db" />
+    <EntitySet Name="weixin" EntityType="dbModel.Store.weixin" store:Type="Tables" Schema="hdm156661638_db" />
+  </EntityContainer>
+  <EntityType Name="alliance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="twocodeid" Type="int" />
+    <Property Name="p_id" Type="varchar" MaxLength="32" />
+    <Property Name="p_name" Type="varchar" MaxLength="128" />
+    <Property Name="c_name" Type="varchar" MaxLength="512" />
+    <Property Name="c_phone" Type="varchar" MaxLength="32" />
+    <Property Name="province" Type="varchar" MaxLength="32" />
+    <Property Name="city" Type="varchar" MaxLength="32" />
+    <Property Name="country" Type="varchar" MaxLength="32" />
+    <Property Name="address" Type="varchar" MaxLength="1024" />
+    <Property Name="url1" Type="varchar" MaxLength="1024" />
+    <Property Name="info" Type="varchar" MaxLength="2048" />
+    <Property Name="msg" Type="varchar" MaxLength="2048" />
+  </EntityType>
+  <EntityType Name="shopform">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="varchar" MaxLength="64" />
+    <Property Name="order_status" Type="varchar" MaxLength="10" />
+    <Property Name="order_total_price" Type="varchar" MaxLength="64" />
+    <Property Name="order_create_time" Type="int" />
+    <Property Name="order_express_price" Type="int" />
+    <Property Name="buyer_openid" Type="varchar" MaxLength="32" />
+    <Property Name="buyer_nick" Type="varchar" MaxLength="128" />
+    <Property Name="receiver_name" Type="varchar" MaxLength="128" />
+    <Property Name="receiver_province" Type="varchar" MaxLength="32" />
+    <Property Name="receiver_city" Type="varchar" MaxLength="32" />
+    <Property Name="receiver_zone" Type="varchar" MaxLength="32" />
+    <Property Name="receiver_address" Type="varchar" MaxLength="512" />
+    <Property Name="receiver_mobile" Type="varchar" MaxLength="32" />
+    <Property Name="receiver_phone" Type="varchar" MaxLength="32" />
+    <Property Name="product_id" Type="varchar" MaxLength="32" />
+    <Property Name="product_name" Type="varchar" MaxLength="64" />
+    <Property Name="product_price" Type="int" />
+    <Property Name="product_count" Type="varchar" MaxLength="16" />
+    <Property Name="car" Type="varchar" MaxLength="512" />
+    <Property Name="allian_id" Type="varchar" MaxLength="32" />
+    <Property Name="real_time" Type="varchar" MaxLength="64" />
+    <Property Name="pre_time" Type="varchar" MaxLength="64" />
+    <Property Name="is_installed" Type="uint" />
+    <Property Name="install_alliance" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="tb_admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="pwd" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_class">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="supid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_commo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="pics" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="info" Type="mediumtext" Nullable="false" />
+    <Property Name="addtime" Type="date" Nullable="false" />
+    <Property Name="area" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="model" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="class" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="brand" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="stocks" Type="int" Nullable="false" />
+    <Property Name="sell" Type="int" Nullable="false" />
+    <Property Name="m_price" Type="float" Nullable="false" />
+    <Property Name="v_price" Type="float" Nullable="false" />
+    <Property Name="fold" Type="float" Nullable="false" />
+    <Property Name="isnew" Type="int" Nullable="false" />
+    <Property Name="isnom" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="formid" Type="varchar" Nullable="false" MaxLength="125" />
+    <Property Name="commo_id" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="commo_name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="commo_num" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="agoprice" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="fold" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="vendee" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="taker" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="tel" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="pay_method" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="del_method" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="formtime" Type="timestamp" Nullable="false" />
+    <Property Name="total" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="location" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tb_links">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="url" Type="varchar" Nullable="false" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tb_opinion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="content" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="commoid" Type="int" Nullable="false" />
+    <Property Name="otime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_public">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="mediumtext" Nullable="false" />
+    <Property Name="addtime" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_sales_fee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="installfee" Type="float" />
+    <Property Name="recommendfee" Type="float" />
+  </EntityType>
+  <EntityType Name="tb_sales_install">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="allian_id" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="install_time" Type="datetime" />
+    <Property Name="user_id" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="tb_sales_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="salt" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="createtime" Type="datetime" Nullable="false" />
+    <Property Name="type" Type="int" Nullable="false" />
+    <Property Name="isenable" Type="bigint" />
+    <Property Name="alliance" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="question" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="answer" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="consume" Type="float" Nullable="false" />
+    <Property Name="realname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="card" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="tel" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="phone" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="QQ" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="address" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="addtime" Type="date" Nullable="false" />
+    <Property Name="isfreeze" Type="int" Nullable="false" />
+    <Property Name="shopping" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="openid" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="location" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="twocode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="info" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="weixin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="info" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="token" Type="varchar" Nullable="false" MaxLength="512" />
+  </EntityType>
+  <Function Name="GetChartByAllianceId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="hdm156661638_db" />
+</Schema>

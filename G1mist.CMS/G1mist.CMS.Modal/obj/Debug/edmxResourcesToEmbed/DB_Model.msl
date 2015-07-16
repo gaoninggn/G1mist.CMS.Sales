@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_CMSModelStoreContainer" CdmEntityContainer="DB_CMSEntities">
+    <EntitySetMapping Name="T_Articles">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Articles">
+        <MappingFragment StoreEntitySet="T_Articles">
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="abstract" ColumnName="abstract" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="cateid" ColumnName="cateid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Categories">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Categories">
+        <MappingFragment StoreEntitySet="T_Categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Links">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Links">
+        <MappingFragment StoreEntitySet="T_Links">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Users">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Users">
+        <MappingFragment StoreEntitySet="T_Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="lastlogintime" ColumnName="lastlogintime" />
+          <ScalarProperty Name="lastloginip" ColumnName="lastloginip" />
+          <ScalarProperty Name="lastloginarea" ColumnName="lastloginarea" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Action">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Action">
+        <MappingFragment StoreEntitySet="T_Action">
+          <ScalarProperty Name="actionname" ColumnName="actionname" />
+          <ScalarProperty Name="controllername" ColumnName="controllername" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Action_Role">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Action_Role">
+        <MappingFragment StoreEntitySet="T_Action_Role">
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Role">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_Role">
+        <MappingFragment StoreEntitySet="T_Role">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_User_Role">
+      <EntityTypeMapping TypeName="DB_CMSModel.T_User_Role">
+        <MappingFragment StoreEntitySet="T_User_Role">
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

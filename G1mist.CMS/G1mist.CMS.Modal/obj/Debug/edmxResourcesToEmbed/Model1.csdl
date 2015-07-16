@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="hdm156661638_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alliance" EntityType="dbModel.alliance" />
+    <EntitySet Name="shopform" EntityType="dbModel.shopform" />
+    <EntitySet Name="tb_admin" EntityType="dbModel.tb_admin" />
+    <EntitySet Name="tb_class" EntityType="dbModel.tb_class" />
+    <EntitySet Name="tb_commo" EntityType="dbModel.tb_commo" />
+    <EntitySet Name="tb_form" EntityType="dbModel.tb_form" />
+    <EntitySet Name="tb_links" EntityType="dbModel.tb_links" />
+    <EntitySet Name="tb_opinion" EntityType="dbModel.tb_opinion" />
+    <EntitySet Name="tb_public" EntityType="dbModel.tb_public" />
+    <EntitySet Name="tb_sales_fee" EntityType="dbModel.tb_sales_fee" />
+    <EntitySet Name="tb_sales_user" EntityType="dbModel.tb_sales_user" />
+    <EntitySet Name="tb_user" EntityType="dbModel.tb_user" />
+    <EntitySet Name="twocode" EntityType="dbModel.twocode" />
+    <EntitySet Name="weixin" EntityType="dbModel.weixin" />
+    <EntitySet Name="tb_sales_install" EntityType="dbModel.tb_sales_install" />
+  </EntityContainer>
+  <EntityType Name="alliance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="twocodeid" Type="Int32" />
+    <Property Name="p_id" Type="String" />
+    <Property Name="p_name" Type="String" />
+    <Property Name="c_name" Type="String" />
+    <Property Name="c_phone" Type="String" />
+    <Property Name="province" Type="String" />
+    <Property Name="city" Type="String" />
+    <Property Name="country" Type="String" />
+    <Property Name="address" Type="String" />
+    <Property Name="url1" Type="String" />
+    <Property Name="info" Type="String" />
+    <Property Name="msg" Type="String" />
+  </EntityType>
+  <EntityType Name="shopform">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="String" />
+    <Property Name="order_status" Type="String" />
+    <Property Name="order_total_price" Type="String" />
+    <Property Name="order_create_time" Type="Int32" />
+    <Property Name="order_express_price" Type="Int32" />
+    <Property Name="buyer_openid" Type="String" />
+    <Property Name="buyer_nick" Type="String" />
+    <Property Name="receiver_name" Type="String" />
+    <Property Name="receiver_province" Type="String" />
+    <Property Name="receiver_city" Type="String" />
+    <Property Name="receiver_zone" Type="String" />
+    <Property Name="receiver_address" Type="String" />
+    <Property Name="receiver_mobile" Type="String" />
+    <Property Name="receiver_phone" Type="String" />
+    <Property Name="product_id" Type="String" />
+    <Property Name="product_name" Type="String" />
+    <Property Name="product_price" Type="Int32" />
+    <Property Name="product_count" Type="String" />
+    <Property Name="car" Type="String" />
+    <Property Name="allian_id" Type="String" />
+    <Property Name="real_time" Type="String" />
+    <Property Name="pre_time" Type="String" />
+    <Property Type="Int64" Name="is_installed" />
+    <Property Type="String" Name="install_alliance" />
+  </EntityType>
+  <EntityType Name="tb_admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="pwd" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_class">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="supid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_commo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="pics" Type="String" Nullable="false" />
+    <Property Name="info" Type="String" Nullable="false" />
+    <Property Name="addtime" Type="DateTime" Nullable="false" />
+    <Property Name="area" Type="String" Nullable="false" />
+    <Property Name="model" Type="String" Nullable="false" />
+    <Property Name="class" Type="String" Nullable="false" />
+    <Property Name="brand" Type="String" Nullable="false" />
+    <Property Name="stocks" Type="Int32" Nullable="false" />
+    <Property Name="sell" Type="Int32" Nullable="false" />
+    <Property Name="m_price" Type="Single" Nullable="false" />
+    <Property Name="v_price" Type="Single" Nullable="false" />
+    <Property Name="fold" Type="Single" Nullable="false" />
+    <Property Name="isnew" Type="Int32" Nullable="false" />
+    <Property Name="isnom" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_form">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="formid" Type="String" Nullable="false" />
+    <Property Name="commo_id" Type="String" Nullable="false" />
+    <Property Name="commo_name" Type="String" Nullable="false" />
+    <Property Name="commo_num" Type="String" Nullable="false" />
+    <Property Name="agoprice" Type="String" Nullable="false" />
+    <Property Name="fold" Type="String" Nullable="false" />
+    <Property Name="vendee" Type="String" Nullable="false" />
+    <Property Name="taker" Type="String" Nullable="false" />
+    <Property Name="address" Type="String" Nullable="false" />
+    <Property Name="tel" Type="String" Nullable="false" />
+    <Property Name="code" Type="String" Nullable="false" />
+    <Property Name="pay_method" Type="String" Nullable="false" />
+    <Property Name="del_method" Type="String" Nullable="false" />
+    <Property Name="formtime" Type="DateTime" Nullable="false" />
+    <Property Name="total" Type="String" Nullable="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_links">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="url" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_opinion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content" Type="String" Nullable="false" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="commoid" Type="Int32" Nullable="false" />
+    <Property Name="otime" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_public">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" />
+    <Property Name="content" Type="String" Nullable="false" />
+    <Property Name="addtime" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_sales_fee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="installfee" Type="Single" />
+    <Property Name="recommendfee" Type="Single" />
+  </EntityType>
+  <EntityType Name="tb_sales_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" />
+    <Property Name="salt" Type="String" Nullable="false" />
+    <Property Name="createtime" Type="DateTime" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="isenable" Type="Int64" />
+    <Property Type="Int32" Name="alliance" />
+  </EntityType>
+  <EntityType Name="tb_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" />
+    <Property Name="question" Type="String" Nullable="false" />
+    <Property Name="answer" Type="String" Nullable="false" />
+    <Property Name="consume" Type="Single" Nullable="false" />
+    <Property Name="realname" Type="String" Nullable="false" />
+    <Property Name="card" Type="String" Nullable="false" />
+    <Property Name="tel" Type="String" Nullable="false" />
+    <Property Name="phone" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="QQ" Type="String" Nullable="false" />
+    <Property Name="code" Type="String" Nullable="false" />
+    <Property Name="address" Type="String" Nullable="false" />
+    <Property Name="addtime" Type="DateTime" Nullable="false" />
+    <Property Name="isfreeze" Type="Int32" Nullable="false" />
+    <Property Name="shopping" Type="String" Nullable="false" />
+    <Property Name="openid" Type="String" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="twocode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeid" Type="String" Nullable="false" />
+    <Property Name="info" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="weixin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="info" Type="String" Nullable="false" />
+    <Property Name="token" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_sales_install">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="order_id" Nullable="false" />
+    <Property Type="String" Name="allian_id" Nullable="false" />
+    <Property Type="DateTime" Name="install_time" />
+    <Property Type="String" Name="user_id" />
+  </EntityType>
+</Schema>

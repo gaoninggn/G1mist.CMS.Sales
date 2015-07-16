@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="hdm156661638_dbEntities">
+    <EntitySetMapping Name="alliance">
+      <EntityTypeMapping TypeName="dbModel.alliance">
+        <MappingFragment StoreEntitySet="alliance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="twocodeid" ColumnName="twocodeid" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="c_name" ColumnName="c_name" />
+          <ScalarProperty Name="c_phone" ColumnName="c_phone" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="url1" ColumnName="url1" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shopform">
+      <EntityTypeMapping TypeName="dbModel.shopform">
+        <MappingFragment StoreEntitySet="shopform">
+          <ScalarProperty Name="install_alliance" ColumnName="install_alliance" />
+          <ScalarProperty Name="is_installed" ColumnName="is_installed" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="order_total_price" ColumnName="order_total_price" />
+          <ScalarProperty Name="order_create_time" ColumnName="order_create_time" />
+          <ScalarProperty Name="order_express_price" ColumnName="order_express_price" />
+          <ScalarProperty Name="buyer_openid" ColumnName="buyer_openid" />
+          <ScalarProperty Name="buyer_nick" ColumnName="buyer_nick" />
+          <ScalarProperty Name="receiver_name" ColumnName="receiver_name" />
+          <ScalarProperty Name="receiver_province" ColumnName="receiver_province" />
+          <ScalarProperty Name="receiver_city" ColumnName="receiver_city" />
+          <ScalarProperty Name="receiver_zone" ColumnName="receiver_zone" />
+          <ScalarProperty Name="receiver_address" ColumnName="receiver_address" />
+          <ScalarProperty Name="receiver_mobile" ColumnName="receiver_mobile" />
+          <ScalarProperty Name="receiver_phone" ColumnName="receiver_phone" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+          <ScalarProperty Name="product_count" ColumnName="product_count" />
+          <ScalarProperty Name="car" ColumnName="car" />
+          <ScalarProperty Name="allian_id" ColumnName="allian_id" />
+          <ScalarProperty Name="real_time" ColumnName="real_time" />
+          <ScalarProperty Name="pre_time" ColumnName="pre_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_admin">
+      <EntityTypeMapping TypeName="dbModel.tb_admin">
+        <MappingFragment StoreEntitySet="tb_admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_class">
+      <EntityTypeMapping TypeName="dbModel.tb_class">
+        <MappingFragment StoreEntitySet="tb_class">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="supid" ColumnName="supid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_commo">
+      <EntityTypeMapping TypeName="dbModel.tb_commo">
+        <MappingFragment StoreEntitySet="tb_commo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="pics" ColumnName="pics" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="addtime" ColumnName="addtime" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="stocks" ColumnName="stocks" />
+          <ScalarProperty Name="sell" ColumnName="sell" />
+          <ScalarProperty Name="m_price" ColumnName="m_price" />
+          <ScalarProperty Name="v_price" ColumnName="v_price" />
+          <ScalarProperty Name="fold" ColumnName="fold" />
+          <ScalarProperty Name="isnew" ColumnName="isnew" />
+          <ScalarProperty Name="isnom" ColumnName="isnom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_form">
+      <EntityTypeMapping TypeName="dbModel.tb_form">
+        <MappingFragment StoreEntitySet="tb_form">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="formid" ColumnName="formid" />
+          <ScalarProperty Name="commo_id" ColumnName="commo_id" />
+          <ScalarProperty Name="commo_name" ColumnName="commo_name" />
+          <ScalarProperty Name="commo_num" ColumnName="commo_num" />
+          <ScalarProperty Name="agoprice" ColumnName="agoprice" />
+          <ScalarProperty Name="fold" ColumnName="fold" />
+          <ScalarProperty Name="vendee" ColumnName="vendee" />
+          <ScalarProperty Name="taker" ColumnName="taker" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="pay_method" ColumnName="pay_method" />
+          <ScalarProperty Name="del_method" ColumnName="del_method" />
+          <ScalarProperty Name="formtime" ColumnName="formtime" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_links">
+      <EntityTypeMapping TypeName="dbModel.tb_links">
+        <MappingFragment StoreEntitySet="tb_links">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_opinion">
+      <EntityTypeMapping TypeName="dbModel.tb_opinion">
+        <MappingFragment StoreEntitySet="tb_opinion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="commoid" ColumnName="commoid" />
+          <ScalarProperty Name="otime" ColumnName="otime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_public">
+      <EntityTypeMapping TypeName="dbModel.tb_public">
+        <MappingFragment StoreEntitySet="tb_public">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="addtime" ColumnName="addtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_sales_fee">
+      <EntityTypeMapping TypeName="dbModel.tb_sales_fee">
+        <MappingFragment StoreEntitySet="tb_sales_fee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="installfee" ColumnName="installfee" />
+          <ScalarProperty Name="recommendfee" ColumnName="recommendfee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_sales_user">
+      <EntityTypeMapping TypeName="dbModel.tb_sales_user">
+        <MappingFragment StoreEntitySet="tb_sales_user">
+          <ScalarProperty Name="alliance" ColumnName="alliance" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="isenable" ColumnName="isenable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_user">
+      <EntityTypeMapping TypeName="dbModel.tb_user">
+        <MappingFragment StoreEntitySet="tb_user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="consume" ColumnName="consume" />
+          <ScalarProperty Name="realname" ColumnName="realname" />
+          <ScalarProperty Name="card" ColumnName="card" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="addtime" ColumnName="addtime" />
+          <ScalarProperty Name="isfreeze" ColumnName="isfreeze" />
+          <ScalarProperty Name="shopping" ColumnName="shopping" />
+          <ScalarProperty Name="openid" ColumnName="openid" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="twocode">
+      <EntityTypeMapping TypeName="dbModel.twocode">
+        <MappingFragment StoreEntitySet="twocode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+          <ScalarProperty Name="info" ColumnName="info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="weixin">
+      <EntityTypeMapping TypeName="dbModel.weixin">
+        <MappingFragment StoreEntitySet="weixin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="token" ColumnName="token" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_sales_install">
+      <EntityTypeMapping TypeName="dbModel.tb_sales_install">
+        <MappingFragment StoreEntitySet="tb_sales_install">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="install_time" ColumnName="install_time" />
+          <ScalarProperty Name="allian_id" ColumnName="allian_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

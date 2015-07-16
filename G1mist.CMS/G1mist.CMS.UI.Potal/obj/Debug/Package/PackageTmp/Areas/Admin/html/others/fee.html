@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="../js/editor/kindeditor-all-min.js" type="text/javascript"></script>
+    <link href="../js/editor/themes/default/default.css" rel="stylesheet" type="text/css" />
+    <script src="../js/editor/lang/zh_CN.js" type="text/javascript"></script>
+    <script src="../js/sweetalert.min.js" type="text/javascript"></script>
+    <link href="../css/sweetalert.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="#">费用设置</a></li>
+        </ul>
+    </div>
+    <div class="formbody">
+        <div class="formtitle">
+            <span>费用设置</span></div>
+        <ul class="forminfo">
+            <li>
+                <label for="txtInstallFee">
+                    安装费用</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtInstallFee" placeholder="在此输入安装费用"
+                        style="width: 350px;"><span id="validateInstallFee" style="color: red; display: none;">安装费用不能为空！</span>
+                </div>
+            </li>
+            <li>
+                <label for="txtFocusFee">
+                    推荐费用</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtFocusFee" placeholder="在此输入推荐费用" style="width: 350px;"><span
+                        id="validateFocusFee" style="color: red; display: none;">推荐费用不能为空！</span>
+                </div>
+            </li>
+            <li>
+                <label>
+                    &nbsp;</label>
+                <button type="button" id="submit" class="btn btn-info">
+                    确认提交</button>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            //页面加载时加载费用
+            $.get("/admin/Others/GetFee", function (msg) {
+                if (msg != "") {
+                    $('#txtInstallFee').val(msg.installfee);
+                    $('#txtFocusFee').val(msg.recommendfee);
+                }
+            });
+
+            //installfee,recommendfee
+            var addToBack = function (i, f) {
+                $.post("/admin/Others/SetFee", { installfee: i, recommendfee: f },
+                   function (msg) {
+                       if (msg.code == 1) {
+                           $(':text').val("");
+                           swal("成功", msg.body, "success");
+                       }
+                       else {
+                           $(':text').val("");
+                           swal("失败", msg.body, "error");
+                       }
+                   });
+            };
+
+            $('#submit').click(function () {
+                var IFee = $('#txtInstallFee').val();
+                var FFee = $('#txtFocusFee').val();
+
+                if (IFee.length <= 0) {
+                    $('#validateInstallFee').css("display", "block");
+                }
+                else if (FFee.length <= 0) {
+                    $('#validateFocusFee').css("display", "block");
+                }
+                else {
+                    $('#validateInstallFee').css("display", "none");
+                    $('#validateFocusFee').css("display", "none");
+                    addToBack(IFee, FFee);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

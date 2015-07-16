@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="alliance" EntityType="dbModel.Store.alliance" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="shopform" EntityType="dbModel.Store.shopform" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_admin" EntityType="dbModel.Store.tb_admin" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_class" EntityType="dbModel.Store.tb_class" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_commo" EntityType="dbModel.Store.tb_commo" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_form" EntityType="dbModel.Store.tb_form" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_links" EntityType="dbModel.Store.tb_links" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_opinion" EntityType="dbModel.Store.tb_opinion" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_public" EntityType="dbModel.Store.tb_public" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_sales_fee" EntityType="dbModel.Store.tb_sales_fee" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_sales_install" EntityType="dbModel.Store.tb_sales_install" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_sales_user" EntityType="dbModel.Store.tb_sales_user" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="tb_user" EntityType="dbModel.Store.tb_user" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="twocode" EntityType="dbModel.Store.twocode" store:Type="Tables" Schema="hdm156661638_db" />
+          <EntitySet Name="weixin" EntityType="dbModel.Store.weixin" store:Type="Tables" Schema="hdm156661638_db" />
+        </EntityContainer>
+        <EntityType Name="alliance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="twocodeid" Type="int" />
+          <Property Name="p_id" Type="varchar" MaxLength="32" />
+          <Property Name="p_name" Type="varchar" MaxLength="128" />
+          <Property Name="c_name" Type="varchar" MaxLength="512" />
+          <Property Name="c_phone" Type="varchar" MaxLength="32" />
+          <Property Name="province" Type="varchar" MaxLength="32" />
+          <Property Name="city" Type="varchar" MaxLength="32" />
+          <Property Name="country" Type="varchar" MaxLength="32" />
+          <Property Name="address" Type="varchar" MaxLength="1024" />
+          <Property Name="url1" Type="varchar" MaxLength="1024" />
+          <Property Name="info" Type="varchar" MaxLength="2048" />
+          <Property Name="msg" Type="varchar" MaxLength="2048" />
+        </EntityType>
+        <EntityType Name="shopform">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="varchar" MaxLength="64" />
+          <Property Name="order_status" Type="varchar" MaxLength="10" />
+          <Property Name="order_total_price" Type="varchar" MaxLength="64" />
+          <Property Name="order_create_time" Type="int" />
+          <Property Name="order_express_price" Type="int" />
+          <Property Name="buyer_openid" Type="varchar" MaxLength="32" />
+          <Property Name="buyer_nick" Type="varchar" MaxLength="128" />
+          <Property Name="receiver_name" Type="varchar" MaxLength="128" />
+          <Property Name="receiver_province" Type="varchar" MaxLength="32" />
+          <Property Name="receiver_city" Type="varchar" MaxLength="32" />
+          <Property Name="receiver_zone" Type="varchar" MaxLength="32" />
+          <Property Name="receiver_address" Type="varchar" MaxLength="512" />
+          <Property Name="receiver_mobile" Type="varchar" MaxLength="32" />
+          <Property Name="receiver_phone" Type="varchar" MaxLength="32" />
+          <Property Name="product_id" Type="varchar" MaxLength="32" />
+          <Property Name="product_name" Type="varchar" MaxLength="64" />
+          <Property Name="product_price" Type="int" />
+          <Property Name="product_count" Type="varchar" MaxLength="16" />
+          <Property Name="car" Type="varchar" MaxLength="512" />
+          <Property Name="allian_id" Type="varchar" MaxLength="32" />
+          <Property Name="real_time" Type="varchar" MaxLength="64" />
+          <Property Name="pre_time" Type="varchar" MaxLength="64" />
+          <Property Name="is_installed" Type="uint" />
+          <Property Name="install_alliance" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="tb_admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="pwd" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_class">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="supid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_commo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="pics" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="info" Type="mediumtext" Nullable="false" />
+          <Property Name="addtime" Type="date" Nullable="false" />
+          <Property Name="area" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="model" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="class" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="brand" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="stocks" Type="int" Nullable="false" />
+          <Property Name="sell" Type="int" Nullable="false" />
+          <Property Name="m_price" Type="float" Nullable="false" />
+          <Property Name="v_price" Type="float" Nullable="false" />
+          <Property Name="fold" Type="float" Nullable="false" />
+          <Property Name="isnew" Type="int" Nullable="false" />
+          <Property Name="isnom" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_form">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="formid" Type="varchar" Nullable="false" MaxLength="125" />
+          <Property Name="commo_id" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="commo_name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="commo_num" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="agoprice" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="fold" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="vendee" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="taker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="tel" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="pay_method" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="del_method" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="formtime" Type="timestamp" Nullable="false" />
+          <Property Name="total" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="state" Type="int" Nullable="false" />
+          <Property Name="location" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tb_links">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="url" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tb_opinion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="content" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="userid" Type="int" Nullable="false" />
+          <Property Name="commoid" Type="int" Nullable="false" />
+          <Property Name="otime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_public">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="mediumtext" Nullable="false" />
+          <Property Name="addtime" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sales_fee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="installfee" Type="float" />
+          <Property Name="recommendfee" Type="float" />
+        </EntityType>
+        <EntityType Name="tb_sales_install">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="allian_id" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="install_time" Type="datetime" />
+          <Property Name="user_id" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="tb_sales_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="salt" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="isenable" Type="bigint" />
+          <Property Name="alliance" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="question" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="answer" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="consume" Type="float" Nullable="false" />
+          <Property Name="realname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="card" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="tel" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="phone" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="QQ" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="address" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="addtime" Type="date" Nullable="false" />
+          <Property Name="isfreeze" Type="int" Nullable="false" />
+          <Property Name="shopping" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="openid" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="location" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="twocode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="typeid" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="info" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="weixin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="info" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="token" Type="varchar" Nullable="false" MaxLength="512" />
+        </EntityType>
+        <Function Name="GetChartByAllianceId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="hdm156661638_db" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="hdm156661638_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="alliance" EntityType="dbModel.alliance" />
+          <EntitySet Name="shopform" EntityType="dbModel.shopform" />
+          <EntitySet Name="tb_admin" EntityType="dbModel.tb_admin" />
+          <EntitySet Name="tb_class" EntityType="dbModel.tb_class" />
+          <EntitySet Name="tb_commo" EntityType="dbModel.tb_commo" />
+          <EntitySet Name="tb_form" EntityType="dbModel.tb_form" />
+          <EntitySet Name="tb_links" EntityType="dbModel.tb_links" />
+          <EntitySet Name="tb_opinion" EntityType="dbModel.tb_opinion" />
+          <EntitySet Name="tb_public" EntityType="dbModel.tb_public" />
+          <EntitySet Name="tb_sales_fee" EntityType="dbModel.tb_sales_fee" />
+          <EntitySet Name="tb_sales_user" EntityType="dbModel.tb_sales_user" />
+          <EntitySet Name="tb_user" EntityType="dbModel.tb_user" />
+          <EntitySet Name="twocode" EntityType="dbModel.twocode" />
+          <EntitySet Name="weixin" EntityType="dbModel.weixin" />
+          <EntitySet Name="tb_sales_install" EntityType="dbModel.tb_sales_install" />
+        </EntityContainer>
+        <EntityType Name="alliance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="twocodeid" Type="Int32" />
+          <Property Name="p_id" Type="String" />
+          <Property Name="p_name" Type="String" />
+          <Property Name="c_name" Type="String" />
+          <Property Name="c_phone" Type="String" />
+          <Property Name="province" Type="String" />
+          <Property Name="city" Type="String" />
+          <Property Name="country" Type="String" />
+          <Property Name="address" Type="String" />
+          <Property Name="url1" Type="String" />
+          <Property Name="info" Type="String" />
+          <Property Name="msg" Type="String" />
+        </EntityType>
+        <EntityType Name="shopform">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="String" />
+          <Property Name="order_status" Type="String" />
+          <Property Name="order_total_price" Type="String" />
+          <Property Name="order_create_time" Type="Int32" />
+          <Property Name="order_express_price" Type="Int32" />
+          <Property Name="buyer_openid" Type="String" />
+          <Property Name="buyer_nick" Type="String" />
+          <Property Name="receiver_name" Type="String" />
+          <Property Name="receiver_province" Type="String" />
+          <Property Name="receiver_city" Type="String" />
+          <Property Name="receiver_zone" Type="String" />
+          <Property Name="receiver_address" Type="String" />
+          <Property Name="receiver_mobile" Type="String" />
+          <Property Name="receiver_phone" Type="String" />
+          <Property Name="product_id" Type="String" />
+          <Property Name="product_name" Type="String" />
+          <Property Name="product_price" Type="Int32" />
+          <Property Name="product_count" Type="String" />
+          <Property Name="car" Type="String" />
+          <Property Name="allian_id" Type="String" />
+          <Property Name="real_time" Type="String" />
+          <Property Name="pre_time" Type="String" />
+          <Property Type="Int64" Name="is_installed" />
+          <Property Type="String" Name="install_alliance" />
+        </EntityType>
+        <EntityType Name="tb_admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="pwd" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_class">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="supid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_commo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="pics" Type="String" Nullable="false" />
+          <Property Name="info" Type="String" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+          <Property Name="area" Type="String" Nullable="false" />
+          <Property Name="model" Type="String" Nullable="false" />
+          <Property Name="class" Type="String" Nullable="false" />
+          <Property Name="brand" Type="String" Nullable="false" />
+          <Property Name="stocks" Type="Int32" Nullable="false" />
+          <Property Name="sell" Type="Int32" Nullable="false" />
+          <Property Name="m_price" Type="Single" Nullable="false" />
+          <Property Name="v_price" Type="Single" Nullable="false" />
+          <Property Name="fold" Type="Single" Nullable="false" />
+          <Property Name="isnew" Type="Int32" Nullable="false" />
+          <Property Name="isnom" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_form">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="formid" Type="String" Nullable="false" />
+          <Property Name="commo_id" Type="String" Nullable="false" />
+          <Property Name="commo_name" Type="String" Nullable="false" />
+          <Property Name="commo_num" Type="String" Nullable="false" />
+          <Property Name="agoprice" Type="String" Nullable="false" />
+          <Property Name="fold" Type="String" Nullable="false" />
+          <Property Name="vendee" Type="String" Nullable="false" />
+          <Property Name="taker" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="tel" Type="String" Nullable="false" />
+          <Property Name="code" Type="String" Nullable="false" />
+          <Property Name="pay_method" Type="String" Nullable="false" />
+          <Property Name="del_method" Type="String" Nullable="false" />
+          <Property Name="formtime" Type="DateTime" Nullable="false" />
+          <Property Name="total" Type="String" Nullable="false" />
+          <Property Name="state" Type="Int32" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_links">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="url" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_opinion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="content" Type="String" Nullable="false" />
+          <Property Name="userid" Type="Int32" Nullable="false" />
+          <Property Name="commoid" Type="Int32" Nullable="false" />
+          <Property Name="otime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_public">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" />
+          <Property Name="content" Type="String" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sales_fee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="installfee" Type="Single" />
+          <Property Name="recommendfee" Type="Single" />
+        </EntityType>
+        <EntityType Name="tb_sales_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="salt" Type="String" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <Property Name="isenable" Type="Int64" />
+          <Property Type="Int32" Name="alliance" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="question" Type="String" Nullable="false" />
+          <Property Name="answer" Type="String" Nullable="false" />
+          <Property Name="consume" Type="Single" Nullable="false" />
+          <Property Name="realname" Type="String" Nullable="false" />
+          <Property Name="card" Type="String" Nullable="false" />
+          <Property Name="tel" Type="String" Nullable="false" />
+          <Property Name="phone" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="QQ" Type="String" Nullable="false" />
+          <Property Name="code" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="addtime" Type="DateTime" Nullable="false" />
+          <Property Name="isfreeze" Type="Int32" Nullable="false" />
+          <Property Name="shopping" Type="String" Nullable="false" />
+          <Property Name="openid" Type="String" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="twocode">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="typeid" Type="String" Nullable="false" />
+          <Property Name="info" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="weixin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="info" Type="String" Nullable="false" />
+          <Property Name="token" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_sales_install">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="order_id" Nullable="false" />
+          <Property Type="String" Name="allian_id" Nullable="false" />
+          <Property Type="DateTime" Name="install_time" />
+          <Property Type="String" Name="user_id" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="hdm156661638_dbEntities">
+          <EntitySetMapping Name="alliance">
+            <EntityTypeMapping TypeName="dbModel.alliance">
+              <MappingFragment StoreEntitySet="alliance">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="twocodeid" ColumnName="twocodeid" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="c_name" ColumnName="c_name" />
+                <ScalarProperty Name="c_phone" ColumnName="c_phone" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="url1" ColumnName="url1" />
+                <ScalarProperty Name="info" ColumnName="info" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shopform">
+            <EntityTypeMapping TypeName="dbModel.shopform">
+              <MappingFragment StoreEntitySet="shopform">
+                <ScalarProperty Name="install_alliance" ColumnName="install_alliance" />
+                <ScalarProperty Name="is_installed" ColumnName="is_installed" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="order_status" ColumnName="order_status" />
+                <ScalarProperty Name="order_total_price" ColumnName="order_total_price" />
+                <ScalarProperty Name="order_create_time" ColumnName="order_create_time" />
+                <ScalarProperty Name="order_express_price" ColumnName="order_express_price" />
+                <ScalarProperty Name="buyer_openid" ColumnName="buyer_openid" />
+                <ScalarProperty Name="buyer_nick" ColumnName="buyer_nick" />
+                <ScalarProperty Name="receiver_name" ColumnName="receiver_name" />
+                <ScalarProperty Name="receiver_province" ColumnName="receiver_province" />
+                <ScalarProperty Name="receiver_city" ColumnName="receiver_city" />
+                <ScalarProperty Name="receiver_zone" ColumnName="receiver_zone" />
+                <ScalarProperty Name="receiver_address" ColumnName="receiver_address" />
+                <ScalarProperty Name="receiver_mobile" ColumnName="receiver_mobile" />
+                <ScalarProperty Name="receiver_phone" ColumnName="receiver_phone" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="product_name" ColumnName="product_name" />
+                <ScalarProperty Name="product_price" ColumnName="product_price" />
+                <ScalarProperty Name="product_count" ColumnName="product_count" />
+                <ScalarProperty Name="car" ColumnName="car" />
+                <ScalarProperty Name="allian_id" ColumnName="allian_id" />
+                <ScalarProperty Name="real_time" ColumnName="real_time" />
+                <ScalarProperty Name="pre_time" ColumnName="pre_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_admin">
+            <EntityTypeMapping TypeName="dbModel.tb_admin">
+              <MappingFragment StoreEntitySet="tb_admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_class">
+            <EntityTypeMapping TypeName="dbModel.tb_class">
+              <MappingFragment StoreEntitySet="tb_class">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="supid" ColumnName="supid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_commo">
+            <EntityTypeMapping TypeName="dbModel.tb_commo">
+              <MappingFragment StoreEntitySet="tb_commo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="pics" ColumnName="pics" />
+                <ScalarProperty Name="info" ColumnName="info" />
+                <ScalarProperty Name="addtime" ColumnName="addtime" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="stocks" ColumnName="stocks" />
+                <ScalarProperty Name="sell" ColumnName="sell" />
+                <ScalarProperty Name="m_price" ColumnName="m_price" />
+                <ScalarProperty Name="v_price" ColumnName="v_price" />
+                <ScalarProperty Name="fold" ColumnName="fold" />
+                <ScalarProperty Name="isnew" ColumnName="isnew" />
+                <ScalarProperty Name="isnom" ColumnName="isnom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_form">
+            <EntityTypeMapping TypeName="dbModel.tb_form">
+              <MappingFragment StoreEntitySet="tb_form">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="formid" ColumnName="formid" />
+                <ScalarProperty Name="commo_id" ColumnName="commo_id" />
+                <ScalarProperty Name="commo_name" ColumnName="commo_name" />
+                <ScalarProperty Name="commo_num" ColumnName="commo_num" />
+                <ScalarProperty Name="agoprice" ColumnName="agoprice" />
+                <ScalarProperty Name="fold" ColumnName="fold" />
+                <ScalarProperty Name="vendee" ColumnName="vendee" />
+                <ScalarProperty Name="taker" ColumnName="taker" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="pay_method" ColumnName="pay_method" />
+                <ScalarProperty Name="del_method" ColumnName="del_method" />
+                <ScalarProperty Name="formtime" ColumnName="formtime" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_links">
+            <EntityTypeMapping TypeName="dbModel.tb_links">
+              <MappingFragment StoreEntitySet="tb_links">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_opinion">
+            <EntityTypeMapping TypeName="dbModel.tb_opinion">
+              <MappingFragment StoreEntitySet="tb_opinion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="commoid" ColumnName="commoid" />
+                <ScalarProperty Name="otime" ColumnName="otime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_public">
+            <EntityTypeMapping TypeName="dbModel.tb_public">
+              <MappingFragment StoreEntitySet="tb_public">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="addtime" ColumnName="addtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sales_fee">
+            <EntityTypeMapping TypeName="dbModel.tb_sales_fee">
+              <MappingFragment StoreEntitySet="tb_sales_fee">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="installfee" ColumnName="installfee" />
+                <ScalarProperty Name="recommendfee" ColumnName="recommendfee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sales_user">
+            <EntityTypeMapping TypeName="dbModel.tb_sales_user">
+              <MappingFragment StoreEntitySet="tb_sales_user">
+                <ScalarProperty Name="alliance" ColumnName="alliance" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="salt" ColumnName="salt" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="isenable" ColumnName="isenable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user">
+            <EntityTypeMapping TypeName="dbModel.tb_user">
+              <MappingFragment StoreEntitySet="tb_user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+                <ScalarProperty Name="consume" ColumnName="consume" />
+                <ScalarProperty Name="realname" ColumnName="realname" />
+                <ScalarProperty Name="card" ColumnName="card" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="addtime" ColumnName="addtime" />
+                <ScalarProperty Name="isfreeze" ColumnName="isfreeze" />
+                <ScalarProperty Name="shopping" ColumnName="shopping" />
+                <ScalarProperty Name="openid" ColumnName="openid" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="twocode">
+            <EntityTypeMapping TypeName="dbModel.twocode">
+              <MappingFragment StoreEntitySet="twocode">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="typeid" ColumnName="typeid" />
+                <ScalarProperty Name="info" ColumnName="info" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="weixin">
+            <EntityTypeMapping TypeName="dbModel.weixin">
+              <MappingFragment StoreEntitySet="weixin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="info" ColumnName="info" />
+                <ScalarProperty Name="token" ColumnName="token" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_sales_install">
+            <EntityTypeMapping TypeName="dbModel.tb_sales_install">
+              <MappingFragment StoreEntitySet="tb_sales_install">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="install_time" ColumnName="install_time" />
+                <ScalarProperty Name="allian_id" ColumnName="allian_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="dbModel.alliance" Width="1.5" PointX="0.75" PointY="0.75" Height="3.4981901041666665" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.shopform" Width="1.5" PointX="2.75" PointY="0.75" Height="5.4083870442708317" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_admin" Width="1.5" PointX="4.75" PointY="0.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_class" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_commo" Width="1.5" PointX="6.75" PointY="0.75" Height="4.0712491861979165" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_form" Width="1.5" PointX="4.75" PointY="6.75" Height="4.45328857421875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_links" Width="1.5" PointX="6.75" PointY="5.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_opinion" Width="1.5" PointX="0.75" PointY="7.75" Height="1.9700325520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_public" Width="1.5" PointX="8.75" PointY="0.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_sales_fee" Width="1.5" PointX="8.75" PointY="3.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_sales_user" Width="1.5" PointX="8.75" PointY="6.75" Height="2.3520719401041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_user" Width="1.5" PointX="10.75" PointY="0.75" Height="4.6443082682291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.twocode" Width="1.5" PointX="0.75" PointY="10.75" Height="1.5879931640625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.weixin" Width="1.5" PointX="10.75" PointY="6.75" Height="1.5879931640625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tb_sales_install" Width="1.5" PointX="7.375" PointY="10.75" Height="1.7790128580729174" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

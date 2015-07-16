@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(function () {
+                $(".menuson li.active").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+        })	
+    </script>
+</head>
+<body style="background: #f0f9fd;">
+    <div class="lefttop">
+        <span></span>仪表盘</div>
+    <dl class="leftmenu">
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico01.png" /></span>管理信息
+            </div>
+            <ul class="menuson">
+                <li class="active"><cite></cite><a href="index.html" target="rightFrame">首页</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico02.png" /></span>分销管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="install/order.html" target="rightFrame">订单信息</a><i></i></li>
+                <li><cite></cite><a href="install/index.html" target="rightFrame">安装信息</a><i></i></li>
+                <li><cite></cite><a href="install/verify.html" target="rightFrame">安装验证</a><i></i></li>
+                <li><cite></cite><a href="others/focus.html" target="rightFrame">关注查询</a><i></i></li>
+                <li><cite></cite><a href="others/fee.html" target="rightFrame">费用设置</a><i></i></li>
+                <li><cite></cite><a href="others/book.html" target="rightFrame">预约信息</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico04.png" /></span>用户管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="users/index.html" target="rightFrame">用户信息</a><i></i></li>
+                <li><cite></cite><a href="users/add.html" target="rightFrame">新增用户</a><i></i></li>
+                <li><cite></cite><a href="users/changepwd.html" target="rightFrame">修改密码</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span>
+                    <img src="images/leftico02.png" /></span>统计
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="others/installchart.html" target="rightFrame">安装量统计</a><i></i></li>
+                <li><cite></cite><a href="others/focuschart.html" target="rightFrame">关注量统计</a><i></i></li>
+                <li><cite></cite><a id="admininstall">总部-安装量统计</a><i></i></li>
+                <li><cite></cite><a id="adminfocus">总部-关注量统计</a><i></i></li>
+            </ul>
+        </dd>
+    </dl>
+    <script type="text/javascript">
+        $(function () {
+            $("#adminfocus").click(function () {
+                $.get("/admin/Chart/isAdmin", function (msg) {
+                    if (msg.code == 0) {
+                        window.top.rightFrame.location.href = "/static/error500.html";
+                        return;
+                    }
+                    else {
+                        window.top.rightFrame.location.href = "others/adminfocuschart.html";
+                    }
+                });
+            });
+            $("#admininstall").click(function () {
+                $.get("/admin/Chart/isAdmin", function (msg) {
+                    if (msg.code == 0) {
+                        window.top.rightFrame.location.href = "/static/error500.html";
+                        return;
+                    }
+                    else {
+                        window.top.rightFrame.location.href = "others/admininstallchart.html";
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

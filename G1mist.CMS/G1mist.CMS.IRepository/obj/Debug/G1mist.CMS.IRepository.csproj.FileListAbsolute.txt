@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\G1mist.CMS\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.pdb
+C:\Users\Administrator\Desktop\G1mist.CMS\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.pdb
+C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.pdb
+C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.pdb
+C:\Users\Administrator\Desktop\G1mist.CMS_sales\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS_sales\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.pdb
+C:\Users\Administrator\Desktop\G1mist.CMS_sales\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.dll
+C:\Users\Administrator\Desktop\G1mist.CMS_sales\G1mist.CMS\G1mist.CMS.IRepository\obj\Debug\G1mist.CMS.IRepository.pdb

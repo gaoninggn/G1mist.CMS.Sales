@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="71b50705-14d2-41c6-b300-7cdbd64d02c4" name="Administrator@GAONING 2015-05-07 18:56:01" runUser="GAONING\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="f9fd48d1-c9fe-4718-bec1-f77f5b837af4">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_GAONING 2015-05-07 18_56_01">
+      <DeploymentItem filename="C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.Repository\bin\Debug\G1mist.CMS.Repository.dll" />
+      <DeploymentItem filename="C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.Modal\bin\Debug\G1mist.CMS.Modal.dll" />
+      <DeploymentItem filename="C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.IRepository\bin\Debug\G1mist.CMS.IRepository.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-05-07T18:56:01.7790904+08:00" queuing="2015-05-07T18:56:04.2112295+08:00" start="2015-05-07T18:56:04.4032405+08:00" finish="2015-05-07T18:56:05.5753076+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\administrator\desktop\g1mist.cms_repository\g1mist.cms\unittestefandmysql\bin\debug\unittestefandmysql.dll" id="253c2b70-479d-4298-477e-1d1818895cc6">
+      <Execution id="7d96478a-72a7-4b00-bc15-29baeb1f277b" />
+      <TestMethod codeBase="C:/Users/Administrator/Desktop/G1mist.CMS_Repository/G1mist.CMS/UnitTestEFAndMySql/bin/Debug/UnitTestEFAndMySql.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTestEFAndMySql.efmysql, UnitTestEFAndMySql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="253c2b70-479d-4298-477e-1d1818895cc6" executionId="7d96478a-72a7-4b00-bc15-29baeb1f277b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7d96478a-72a7-4b00-bc15-29baeb1f277b" testId="253c2b70-479d-4298-477e-1d1818895cc6" testName="TestMethod1" computerName="GAONING" duration="00:00:00.2099978" startTime="2015-05-07T18:56:04.4682442+08:00" endTime="2015-05-07T18:56:05.4743018+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d96478a-72a7-4b00-bc15-29baeb1f277b">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 UnitTestEFAndMySql.efmysql.TestMethod1 引发了异常: 
+System.ArgumentException: 指定的命名连接在配置中找不到、非计划用于 EntityClient 提供程序或者无效。</Message>
+          <StackTrace>    在 System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   在 System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   在 System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   在 System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   在 G1mist.CMS.Modal.hdm156661638_dbEntities..ctor() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.Modal\Model1.Designer.cs:行号 34
+   在 G1mist.CMS.DAL.ContextFactory.GetCurrentDbContext() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.DAL\ContextFactory.cs:行号 28
+   在 G1mist.CMS.DAL.SqlServerDal`1..ctor() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.DAL\SQLServerDAL.cs:行号 17
+   在 G1mist.CMS.DAL.DalFactory`1.GetCurrentDal() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.DAL\ContextFactory.cs:行号 44
+   在 G1mist.CMS.Repository.BaseRepository`1..ctor() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\G1mist.CMS.Repository\BaseRepository.cs:行号 22
+   在 UnitTestEFAndMySql.efmysql.TestMethod1() 位置 C:\Users\Administrator\Desktop\G1mist.CMS_Repository\G1mist.CMS\UnitTestEFAndMySql\efmysql.cs:行号 69
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
